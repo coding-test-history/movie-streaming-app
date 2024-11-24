@@ -20,4 +20,4 @@ jobs:
 
       - name: Reload Application in Docker
         run: |
-          ssh -i ~/.ssh/id_rsa administrator@192.168.0.111 "docker exec -it floweradvisor sh -c 'touch tmp/restart.txt'"
+          ssh -i ~/.ssh/id_rsa administrator@192.168.0.111 "docker exec -i floweradvisor sh -c 'touch tmp/restart.txt'"
