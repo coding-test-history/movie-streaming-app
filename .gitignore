@@ -12,3 +12,8 @@ npm-debug.log
 yarn-error.log
 .vscode
 .DS_Store
+
+# install nano, docker compose, iputils ping
+# enable a2enmod header, rewrite
+# setting ssl
+# allow header 

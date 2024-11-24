@@ -1,24 +1,32 @@
 version: '3.8'
+
 services:
-  laravel-app:
+  app:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: laravel_app
     ports:
-      - "80:80"
+      - "8000:80"
     volumes:
       - .:/var/www/html
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html
     depends_on:
-      - mysql-db
+      - db
 
-  mysql-db:
+  db:
     image: mysql:5.7
-    container_name: mysql_container
-    restart: always
+    container_name: mysql_db
+    ports:
+      - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: db_floweradvisor
       MYSQL_USER: user_floweradvisor
       MYSQL_PASSWORD: password
-    ports:
-      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

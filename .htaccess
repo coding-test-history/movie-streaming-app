@@ -25,9 +25,3 @@
     Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
     Header set Access-Control-Allow-Headers "Content-Type, Authorization"
 </IfModule>
-
-
-<Directory>
-    AllowOverride All
-    Header add Access-Control-Allow-Origin "*"
-</Directory>
