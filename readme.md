@@ -2,6 +2,7 @@
 ## Tech Stack
 
 **Client:** Javascript, Sweetalert 2, Cookie Js, Bootstrap 5
+
 **Server:** Laravel 5.5 | PHP 7.4, MySQL, OMDB API, JWT Auth
 
 ## Features
