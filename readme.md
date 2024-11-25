@@ -1,38 +1,102 @@
-# Library
-#### Laravel
-JWT Auth
-#### Js
-Sweetalert 2
-Cookie js
 
-## Architecture
-MVC + Repository Pattern
+## Tech Stack
 
+**Client:** Javascript, Sweetalert 2, Cookie Js, Bootstrap 5
+**Server:** Laravel 5.5 | PHP 7.4, MySQL, OMDB API, JWT Auth
 
-## Screenshot
-login page
-![image](assets/images/ss/login.png)
+## Features
 
-login fail
-![image](assets/images/ss/login%20fail.png)
+ - Login, Logout
+ - Movie List
+ - Movie Detail
+ - My Favorite
+ - Multi Language (ENG | IDN)
+ - My Favorite List
+ - Filter & Search
+ - Infinite Scroll
+ - Skeleton Loader
+ - Empty Layout
 
-movie list
-![image](assets/images/ss/movie%20list.png)
+## Installation
+install composer
+```bash
+  composer install
+```
+run migration    
+```bash
+  php artisan migrate
+```
+run seeder
+```bash
+  php artisan db:seed --class=DatabaseSeeder
+```
+create account, get API Key from omdbapi and paste on .env
+```bash
+  OMDB_URL= 
+  OMDB_KEY= 
+```
+## Demo
 
-movie detail
-![image](assets/images/ss/movie%20detail.png)
+- Username : administrator
+- Password : password
 
-movie detail 2
-![image](assets/images/ss/movie%20detail%202.png)
+## API Reference
 
-simple search
-![image](assets/images/ss/simple%20search.png)
+#### Login
 
-advaced search
-![image](assets/images/ss/advanced%20search.png)
+```http
+  POST /api/auth/login
+```
 
-my favorite
-![image](assets/images/ss/my%20favorite.png)
+#### Get movie list
 
-multi languange
-![image](assets/images/ss/multi%20language.png)
+```http
+  GET /api/auth/movie/list
+```
+
+#### Get movie detail
+
+```http
+  GET /api/auth/movie/detail/{$id}
+```
+
+#### Get movie highlight
+
+```http
+  GET /api/auth/movie/highlight/{$itile}
+```
+
+#### Search Movie
+
+```http
+  GET /api/auth/movie/search?t=
+```
+
+## Screenshots
+
+#### login page
+![login page](assets/images/ss/login.png)
+
+#### login fail
+![login fail](assets/images/ss/login%20fail.png)
+
+#### movie list
+![movie list](assets/images/ss/movie%20list.png)
+
+#### movie detail
+![movie detail](assets/images/ss/movie%20detail.png)
+
+#### movie detail 2
+![movie detail 2](assets/images/ss/movie%20detail%202.png)
+
+#### simple search
+![simple search](assets/images/ss/simple%20search.png)
+
+#### advaced search
+![advaced search](assets/images/ss/advanced%20search.png)
+
+#### my favorite
+![my favorite](assets/images/ss/my%20favorite.png)
+
+#### multi languange
+![multi languange](assets/images/ss/multi%20language.png)
